@@ -4,7 +4,7 @@ const products = [
     name: "Ecouteurs",
     price: 10000,
     category: "tech",
-    img: "../assets/img/ecouteurs.jpg",
+    img: "assets/img/ecouteurs.jpg",
     rating: 4
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: "Téléphone",
     price: 150000,
     category: "tech",
-    img: "../assets/img/phone.jpg",
+    img: "assets/img/phone.jpg",
     rating: 5
   },
   {
@@ -20,7 +20,7 @@ const products = [
     name: "Airprod",
     price: 100000,
     category: "tech",
-    img: "../assets/img/airprod.jpg",
+    img: "assets/img/airprod.jpg",
     rating: 3
   },
   {
@@ -28,7 +28,7 @@ const products = [
     name: "Téléphone",
     price: 1200000,
     category: "tech",
-    img: "../assets/img/mobile.jpg",
+    img: "assets/img/mobile.jpg",
     rating: 5
   },
   {
@@ -36,7 +36,7 @@ const products = [
     name: "Téléphone",
     price: 1200000,
     category: "tech",
-    img: "../assets/img/mobile1.jpg",
+    img: "assets/img/mobile1.jpg",
     rating: 4
   },
   {
@@ -44,7 +44,7 @@ const products = [
     name: "T-shirt",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/gallery-2.jpg",
+    img: "assets/img/gallery-2.jpg",
     rating: 4
   },
   {
@@ -52,7 +52,7 @@ const products = [
     name: "T-shirt",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/gallery-3.jpg",
+    img: "assets/img/gallery-3.jpg",
     rating: 3
   },
   {
@@ -60,7 +60,7 @@ const products = [
     name: "T-shirt",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/gallery-4.jpg",
+    img: "assets/img/gallery-4.jpg",
     rating: 5
   },
   {
@@ -68,7 +68,7 @@ const products = [
     name: "Pantallon",
     price: 90000,
     category: "Vêtements",
-    img: "../assets/img/pantalonshoesgrey.jpg",
+    img: "assets/img/pantalonshoesgrey.jpg",
     rating: 4
   },
   {
@@ -76,7 +76,7 @@ const products = [
     name: "Montre",
     price: 70000,
     category: "Vêtements",
-    img: "../assets/img/gadget.png",
+    img: "assets/img/gadget.png",
     rating: 3
   },
   {
@@ -84,7 +84,7 @@ const products = [
     name: "Pantallon",
     price: 80000,
     category: "Vêtements",
-    img: "../assets/img/pantalonshoes.jpg",
+    img: "assets/img/pantalonshoes.jpg",
     rating: 4
   },
   {
@@ -92,7 +92,7 @@ const products = [
     name: "Pull",
     price: 60000,
     category: "Vêtements",
-    img: "../assets/img/pulwoman.jpg",
+    img: "assets/img/pulwoman.jpg",
     rating: 5
   },
   {
@@ -100,7 +100,7 @@ const products = [
     name: "Chaussures",
     price: 150000,
     category: "Vêtements",
-    img: "../assets/img/shoes.jpg",
+    img: "assets/img/shoes.jpg",
     rating: 4
   },
   {
@@ -108,7 +108,7 @@ const products = [
     name: "Chaussures",
     price: 200000,
     category: "Vêtements",
-    img: "../assets/img/shoesgrey.jpg",
+    img: "assets/img/shoesgrey.jpg",
     rating: 3
   },
   {
@@ -116,7 +116,7 @@ const products = [
     name: "Chaussures",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/shoesjordan.jpg",
+    img: "assets/img/shoesjordan.jpg",
     rating: 5
   },
   {
@@ -124,7 +124,7 @@ const products = [
     name: "T-shirts",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/shoesman.jpg",
+    img: "assets/img/shoesman.jpg",
     rating: 4
   },
   {
@@ -132,7 +132,7 @@ const products = [
     name: "Chaussures",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/shoesred.jpg",
+    img: "assets/img/shoesred.jpg",
     rating: 5
   },
   {
@@ -140,7 +140,7 @@ const products = [
     name: "T-shirt",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/t-shirtappolo.jpg",
+    img: "assets/img/t-shirtappolo.jpg",
     rating: 3
   },
   {
@@ -148,7 +148,7 @@ const products = [
     name: "T-shirts",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/t-shirtblack.jpg",
+    img: "assets/img/t-shirtblack.jpg",
     rating: 4
   },
   {
@@ -156,7 +156,7 @@ const products = [
     name: "T-shirts",
     price: 20000,
     category: "Vêtements",
-    img: "../assets/img/t-shirtred.jpg",
+    img: "assets/img/t-shirtred.jpg",
     rating: 5
   },
   {
@@ -164,7 +164,7 @@ const products = [
     name: "Montre",
     price: 20000,
     category: "tech",
-    img: "../assets/img/watch.jpg",
+    img: "assets/img/watch.jpg",
     rating: 4
   },
   {
@@ -172,7 +172,7 @@ const products = [
     name: "Montre",
     price: 20000,
     category: "tech",
-    img: "../assets/img/watchbalck.jpg",
+    img: "assets/img/watchbalck.jpg",
     rating: 5
   }
 ];
