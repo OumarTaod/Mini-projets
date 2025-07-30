@@ -75,7 +75,7 @@ const products = [
     id: 10,
     name: "Montre",
     price: 70000,
-    category: "Vêtements",
+    category: "tech",
     img: "assets/img/gadget.png",
     rating: 3
   },
@@ -243,7 +243,7 @@ function renderCart() {
     li.innerHTML = `
       ${item.name} - ${item.price} GNF
       <button onclick="removeFromCart(${index})" title="Supprimer">
-        <img src="../assets/img/iconsup.jpg" alt="Supprimer" style="width: 20px; height: 20px; cursor: pointer; margin-left: 0px;"/>
+        <img src="assets/img/iconsup.jpg" alt="Supprimer" style="width: 20px; height: 20px; cursor: pointer; margin-left: 0px;"/>
       </button>
     `;
     cartItems.appendChild(li);
