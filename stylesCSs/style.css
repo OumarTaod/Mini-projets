@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #0d6efd;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgb(13 110 253 / 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: padding 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Style du header lors du défilement */
+header.header-scrolled {
+  padding: 12px 40px;
+  background-color: #0a58ca;
+  box-shadow: 0 4px 12px rgb(13 110 253 / 0.4);
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav button.filter-btn {
+  background: #0a58ca;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+nav button.filter-btn:hover,
+nav button.filter-btn.active {
+  background: #084298;
+}
+
+#cart-icon {
+  position: relative;
+}
+
+#panie {
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+#panie:hover {
+  color: #ffd633;
+}
+
+#cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ffc107;
+  color: #333;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 2px 7px;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  padding: 30px 40px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 40px; /* Augmentation de l'espace en haut */
+}
+
+/* Produit grid */
+#product-list {
+  flex: 1 1 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product {
+  background-color: white;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Animation au survol */
+.product:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+  z-index: 10;
+}
+
+.product:hover img {
+  transform: scale(1.08);
+}
+
+.product img {
+  max-width: 100%;
+  height: 180px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #0d6efd;
+}
+
+.product p {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Style pour les évaluations */
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 0 1px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.product button {
+  background-color: #198754;
+  border: none;
+  color: white;
+  padding: 8px 0;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #145c32;
+}
+
+/* Panier (aside) - caché par défaut */
+#cart {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.15);
+  padding: 25px 20px;
+  width: 320px;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: none;
+  /* caché au départ */
+  flex-shrink: 0;
+  position: sticky;
+  top: 30px;
+}
+
+#cart h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #0d6efd;
+  text-align: center;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 6px;
+}
+
+#cart-items {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 25px;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 6px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+#cart-items button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#cart-items button img {
+  width: 22px;
+  height: 22px;
+  filter: invert(34%) sepia(85%) saturate(390%) hue-rotate(335deg) brightness(90%) contrast(88%);
+  transition: filter 0.3s ease;
+}
+
+#cart-items button:hover img {
+  filter: invert(18%) sepia(91%) saturate(571%) hue-rotate(336deg) brightness(108%) contrast(105%);
+}
+
+#totalproduits {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #198754;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #0d6efd;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgb(13 110 253 / 0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 30px; /* Ajustement de l'espace en haut pour les écrans moyens */
+  }
+
+  #cart {
+    width: 100%;
+    max-height: none;
+    position: relative;
+    top: auto;
+    margin-top: 30px;
+  }
+  
+  #product-list {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .product img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  #product-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .product {
+    padding: 12px;
+  }
+  
+  .product img {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  header {
+    padding: 15px 20px;
+  }
+  
+  header.header-scrolled {
+    padding: 10px 20px;
+  }
+  
+  main {
+    padding-top: 20px; /* Ajustement de l'espace en haut pour les petits écrans */
+  }
+  
+  /* Ajustement pour le header fixe sur petits écrans */
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav button.filter-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Casque Bluetooth",
+    "price": 45,
+    "rating": 4,
+    "image": "assets/img/casque.jpg",
+    "category": "Électronique"
+  },
+  {
+    "id": 2,
+    "name": "Montre Connectée",
+    "price": 30,
+    "rating": 5,
+    "image": "assets/img/montre.jpg",
+    "category": "Accessoires"
+  },
+  {
+    "id": 3,
+    "name": "Clavier Gamer",
+    "price": 25,
+    "rating": 4,
+    "image": "assets/img/clavier.jpg",
+    "category": "Électronique"
+  }
+]
