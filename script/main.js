@@ -74,7 +74,7 @@ const products = [
   {
     id: 10,
     name: "Montre",
-    price: 70000,
+    price: 50000,
     category: "tech",
     img: "assets/img/gadget.png",
     rating: 3
@@ -114,15 +114,15 @@ const products = [
   {
     id: 15,
     name: "Chaussures",
-    price: 20000,
+    price: 1500000,
     category: "Vêtements",
     img: "assets/img/shoesjordan.jpg",
     rating: 5
   },
   {
     id: 16,
-    name: "T-shirts",
-    price: 20000,
+    name: "Chassures",
+    price: 180000,
     category: "Vêtements",
     img: "assets/img/shoesman.jpg",
     rating: 4
@@ -130,7 +130,7 @@ const products = [
   {
     id: 17,
     name: "Chaussures",
-    price: 20000,
+    price: 120000,
     category: "Vêtements",
     img: "assets/img/shoesred.jpg",
     rating: 5
@@ -138,7 +138,7 @@ const products = [
   {
     id: 18,
     name: "T-shirt",
-    price: 20000,
+    price: 25000,
     category: "Vêtements",
     img: "assets/img/t-shirtappolo.jpg",
     rating: 3
@@ -162,7 +162,7 @@ const products = [
   {
     id: 21,
     name: "Montre",
-    price: 20000,
+    price: 60000,
     category: "tech",
     img: "assets/img/watch.jpg",
     rating: 4
@@ -170,7 +170,7 @@ const products = [
   {
     id: 22,
     name: "Montre",
-    price: 20000,
+    price: 50000,
     category: "tech",
     img: "assets/img/watchbalck.jpg",
     rating: 5
@@ -185,6 +185,25 @@ const totalPrice = document.getElementById("total-price");
 const cartCount = document.getElementById("cart-count");
 const cartElement = document.getElementById("cart");
 const cartIcon = document.getElementById("panie");
+const Dateactu = document.getElementById("ladate"); //  ici la date du jour
+
+function updateDateTime() {
+  const now = new Date();
+  Dateactu.textContent = now.toLocaleString('fr-FR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+}
+
+// Appelle une première fois au chargement
+updateDateTime();
+
+// Puis toutes les secondes
+setInterval(updateDateTime, 1000);
 
 // Affiche les produits selon la catégorie
 function displayProducts(category = "all") {
